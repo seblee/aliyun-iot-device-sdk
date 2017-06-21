@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5CB76778-8480-458A-A07D-06A6BD45DBF3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>iot_device_sdk_ccp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\..\..\src\ccp\include;..\..\..\..\public_libs\mbedtls\include\mbedtls;..\..\..\..\public_libs\mbedtls\include;..\..\..\..\public_libs\mbedtls\configs\windows\mbedtls;..\..\..\..\public_libs\mbedtls\configs\windows;..\..\..\..\public_libs\porting\mbedtls;..\..\..\..\platform\windows\inc;..\..\..\..\include\ccp;..\..\..\..\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_base64.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_config.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_datatype.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_error.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_hmac.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_httpclient.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_json.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_list.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_log.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_md5.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_sha1.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_urlencode.h" />
+    <ClInclude Include="..\..\..\..\common\inc\aliyun_iot_common_util.h" />
+    <ClInclude Include="..\..\..\..\include\ccp\CCPIoTSDK.h" />
+    <ClInclude Include="..\..\..\..\include\ccp\CCPTypeDef.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_memory.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_network.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_persistence.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_pthread.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_random.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_signal.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_stdio.h" />
+    <ClInclude Include="..\..\..\..\platform\windows\inc\aliyun_iot_platform_timer.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\configs\windows\mbedtls\config.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\aes.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\aesni.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\arc4.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\asn1.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\asn1write.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\base64.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\bignum.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\blowfish.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\bn_mul.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\camellia.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ccm.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\certs.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\check_config.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\cipher.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\cipher_internal.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\compat-1.3.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ctr_drbg.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\debug.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\des.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\dhm.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ecdh.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ecdsa.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ecjpake.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ecp.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\entropy.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\entropy_poll.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\error.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\gcm.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\havege.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\hmac_drbg.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\md.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\md2.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\md4.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\md5.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\md_internal.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\memory_buffer_alloc.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\net.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\oid.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\padlock.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pem.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pk.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pkcs11.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pkcs12.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pkcs5.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\pk_internal.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\platform.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ripemd160.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\rsa.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\sha1.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\sha256.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\sha512.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl_cache.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl_ciphersuites.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl_cookie.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl_internal.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\ssl_ticket.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\threading.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\timing.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\version.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\x509.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\x509_crl.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\x509_crt.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\x509_csr.h" />
+    <ClInclude Include="..\..\..\..\public_libs\mbedtls\include\mbedtls\xtea.h" />
+    <ClInclude Include="..\..\..\..\public_libs\porting\mbedtls\aliyun_iot_network_ssl.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPAuth.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPClient.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPClientInternal.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPConnect.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPConnectAck.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPDisconnect.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPNetwork.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPacket.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPong.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPublish.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPublishAck.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPush.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPPushAck.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPReconnect.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPReconnectAck.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPRPCRequest.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPRPCResponse.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPRRPCRequest.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPRRPCResponse.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPSubscribe.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPSubscribeAck.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPTypeDefInternal.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPUnknownSession.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPUnsubscribe.h" />
+    <ClInclude Include="..\..\..\..\src\ccp\include\CCPUnsubscribeAck.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_base64.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_config.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_hmac.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_httpclient.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_json.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_list.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_log.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_md5.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_sha1.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_urlencode.c" />
+    <ClCompile Include="..\..\..\..\common\src\aliyun_iot_common_util.c" />
+    <ClCompile Include="..\..\..\..\examples\windows\ccp\demo.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_memory.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_network.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_persistence.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_pthread.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_random.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_signal.c" />
+    <ClCompile Include="..\..\..\..\platform\windows\src\aliyun_iot_platform_timer.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\aes.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\aesni.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\arc4.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\asn1parse.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\asn1write.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\base64.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\bignum.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\blowfish.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\camellia.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ccm.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\certs.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\cipher.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\cipher_wrap.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ctr_drbg.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\debug.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\des.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\dhm.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ecdh.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ecdsa.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ecjpake.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ecp.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ecp_curves.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\entropy.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\entropy_poll.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\error.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\gcm.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\havege.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\hmac_drbg.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\md.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\md2.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\md4.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\md5.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\md_wrap.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\memory_buffer_alloc.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\net.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\oid.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\padlock.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pem.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pk.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pkcs11.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pkcs12.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pkcs5.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pkparse.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pkwrite.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\pk_wrap.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\platform.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ripemd160.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\rsa.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\sha1.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\sha256.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\sha512.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_cache.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_ciphersuites.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_cli.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_cookie.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_srv.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_ticket.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\ssl_tls.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\threading.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\timing.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\version.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\version_features.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509write_crt.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509write_csr.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509_create.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509_crl.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509_crt.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\x509_csr.c" />
+    <ClCompile Include="..\..\..\..\public_libs\mbedtls\library\xtea.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPAuth.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPClient.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPClientInternal.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPConnect.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPConnectAck.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPDisconnect.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPNetwork.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPacket.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPong.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPublish.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPublishAck.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPush.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPPushAck.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPReconnect.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPReconnectAck.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPRPCRequest.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPRPCResponse.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPRRPCRequest.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPRRPCResponse.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPSubscribe.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPSubscribeAck.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPUnknownSession.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPUnsubscribe.c" />
+    <ClCompile Include="..\..\..\..\src\ccp\CCPUnsubscribeAck.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

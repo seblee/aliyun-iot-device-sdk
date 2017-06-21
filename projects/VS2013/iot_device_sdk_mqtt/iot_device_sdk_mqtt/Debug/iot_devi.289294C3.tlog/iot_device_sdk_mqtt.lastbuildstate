@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug|Win32|D:\MyCloud\AliyunIOT\aliyun-iot-device-sdk-c-2017-05-11\projects\VS2013\iot_device_sdk_mqtt\|

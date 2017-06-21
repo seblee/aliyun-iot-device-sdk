@@ -1,0 +1,16 @@
+LIBRARY iot_device_sdk_mqtt
+
+EXPORTS
+  aliyun_iot_auth_init
+  aliyun_iot_auth_release
+  aliyun_iot_set_device_info
+  aliyun_iot_auth
+  
+  aliyun_iot_mqtt_init
+  aliyun_iot_mqtt_release
+  aliyun_iot_mqtt_connect
+  aliyun_iot_mqtt_disconnect
+  aliyun_iot_mqtt_subscribe
+  aliyun_iot_mqtt_unsubscribe
+  aliyun_iot_mqtt_suback_sync
+  aliyun_iot_mqtt_publish

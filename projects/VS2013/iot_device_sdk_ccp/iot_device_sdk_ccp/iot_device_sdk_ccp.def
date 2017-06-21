@@ -1,0 +1,14 @@
+LIBRARY iot_device_sdk_ccp
+
+EXPORTS
+  CCPInit
+  CCPRelease
+  CCPAuth
+  CCPSendConnectMsg
+  CCPSendDisconnectMsg
+  
+  CCPSendRPCRequestMsg
+  CCPSendRRPCResponseMsg
+  CCPSendSubscribeMsg
+  CCPSendPublishMsg
+  CCPSendUnsubscribeMsg
